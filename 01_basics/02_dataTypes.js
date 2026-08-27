@@ -36,3 +36,7 @@ console.log (typeof age)
 console.log(typeof null)//object
 
 console.log(typeof undefined);//undefined
+
+console.log("Umar")
+//Quotes are for writing a string value. Variables don't need quotes 
+// because JavaScript needs to look inside the variable and use its stored value.
