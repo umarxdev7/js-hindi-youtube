@@ -46,6 +46,39 @@ console.log(typeof myFunction);
 
 console.log(typeof anotherId);
 
- https://262.ecma-international.org/5.1/#sec-11.4.3
+ //https://262.ecma-international.org/5.1/#sec-11.4.3
  
 
+
+
+ // ++++++++++++++++++++++++++++++++++++++
+
+ // Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "brown444yt"
+
+
+let anotherName = myYoutubeName
+anotherName = "chaiaurcode"
+console.log(anotherName);
+console.log(myYoutubeName);
+ // stacke me change original value
+ // me nahi hota copy me hota h
+
+
+let userOne= { 
+  email: "user@google.com",
+  upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email =  "umar@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+// Heap me original reference
+//milta hai original value me 
+//change hota hai
