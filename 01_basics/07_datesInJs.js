@@ -21,7 +21,7 @@ console.log(typeof myDate); //object
 /*******************DATE TO STRING****************** */
 
 console.log(myDate.toString());
-//ye date ko readable string ke form me deta hai
+//ye date ko readable string ke form me deta hai time ke sath
 
 
 
