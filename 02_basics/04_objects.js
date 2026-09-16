@@ -1,0 +1,198 @@
+/**********************new Object()************************** */
+const player = new Object()
+//creates an object just like that {}
+player.name = "Cristiano Ronaldo"
+player.country = "Portugal"
+player.jersey = 7
+console.log(player);
+
+const khiladi = {} //Modern javaScript me ham ye hi use karenge
+khiladi.name = "Umar"
+khiladi.age = "22"
+khiladi.status = "GOAT"
+console.log(khiladi);
+
+
+
+/**********************Nested Objects***************************** */
+//object ke andar object
+const mobile = {
+    brand: "Samsung",
+    model: "S24",
+    specifications: {
+        ram: "8GB",
+        storage : "256GB"
+
+    }
+}
+console.log(mobile.brand);
+console.log(mobile.specifications.ram);
+//kyuki ram specifications me hai aur specifications mobile ke andar
+console.log(mobile.specifications.storage);
+
+const company = {
+    name: "Google",
+    office: {
+        location:{
+            city: "Mumbai",
+            country: "India"
+        }
+    }
+}
+console.log(company.office.location.country);
+
+console.log(company.office.location.city);
+
+
+/******************Object.keys()****************** */
+let athlete = {
+    name: "Ronaldo",
+    country: "Portugal",
+        age    : 41,
+    jersey: 7
+}
+console.log(Object.keys(athlete));
+/*🧠 Object.keys() kya karta hai?
+
+Object ke saare property names (keys) ko ek array mein de deta hai.*/
+
+
+
+/***********************Object.values()********************8 */
+console.log(Object.values(athlete));
+//ye keys nahi values denga
+
+
+
+/************************Object.entries()****************** */
+console.log(Object.entries(athlete));
+//gives both keys and their values in array (array me pack karke deta re)
+
+/*🔒 Ab ye 3 permanently yaad:
+Method	Kya deta hai?
+Object.keys(obj)	🔑 Keys
+Object.values(obj)	📦 Values
+Object.entries(obj)	🔑📦 Key + Value pairs
+
+Bhai ye important real-world methods hain, especially jab backend/API data ke saath kaam karega. 💪 */
+
+
+
+/*************************Object.hasOwnProperty()***************************** */
+//check karna ke object ke andar koi property actually exist karti hai ya nahi
+
+let athlete1= {
+    name: "Ronaldo",
+    country: "Portugal",
+    age: 41,
+    jersey: 7
+}
+
+console.log(athlete.hasOwnProperty("name")); //true
+console.log(athlete.hasOwnProperty("club")); //false
+console.log(athlete.hasOwnProperty("jersey")); //true
+
+
+
+/************************Object.assign()*********************** */
+//Objects ko combine karta hai
+let playerInfo ={
+    name: "Ronaldo",
+    country: "Portugal"
+}
+
+let careerInfo = {
+    club: "Al Nassr",
+    jersey: 7
+}
+let info = Object.assign({}, playerInfo, careerInfo)
+console.log(info);
+
+/*🧠 Ye {} kya hai?
+Object.assign({}, playerInfo, careerInfo)
+
+Sabse pehla {} target/empty object hai.
+
+Baaki objects:
+
+playerInfo
+careerInfo
+
+ki properties usmein copy ho jaati hain.
+
+So simple memory:
+
+Object.assign() → objects ki properties ko ek object mein copy/combine karta hai.*/
+
+
+//Modern Way using spread operator
+let info1 = {
+    ...playerInfo,
+    ...careerInfo
+}
+console.log(info1);  // same result dega
+
+ 
+let studentInfo = {
+    name: "Umar",
+    branch: "IT"
+}
+let collegeInfo = {
+    year : 3,
+    city : "Jalgaon"
+}
+let student = Object.assign({}, studentInfo, collegeInfo)
+console.log(student);
+
+
+
+/**************************OBJECT SPREAD OPERATOR*************************** */
+
+let user = {
+    name: "Umar",
+    age: 21
+}
+let userCopy = {
+    ...user
+}
+console.log(userCopy);
+//... user ki properties ko unpack/copy karta hai
+
+//original variable remains unchanged
+
+
+
+let personal = {
+    name: "Umar",
+    age: 21
+}
+
+let academic = {
+    branch: "IT",
+    year: 3
+}
+
+let profile = {
+    ...personal,
+    ...academic
+}
+
+console.log(profile);
+
+
+
+let phone = {
+    brand: "Samsung",
+    model: "S24"
+}
+
+let specs = {
+    ram: "8GB" ,
+    storage: "256GB"
+
+}
+let fullPhone = {
+    ...phone,
+    ...specs
+}
+console.log(fullPhone);
