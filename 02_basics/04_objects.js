@@ -180,10 +180,13 @@ let profile = {
 console.log(profile);
 
 
-
+/********************************************************************************************************** */
 let phone = {
     brand: "Samsung",
-    model: "S24"
+    model: "S24",
+    popularity: {
+        status: "Good"
+    }
 }
 
 let specs = {
@@ -195,4 +198,15 @@ let fullPhone = {
     ...phone,
     ...specs
 }
+fullPhone.popularity = {
+    ...phone.popularity //nested object ke waaste ek alag copy banana hai yaad rakh bas itna
+}
 console.log(fullPhone);
+
+
+//or 
+let fullPhone2 = Object.assign({}, phone, specs)
+fullPhone2.popularity = {
+    ...phone.popularity
+}
+console.log(fullPhone2);
