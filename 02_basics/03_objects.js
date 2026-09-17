@@ -152,6 +152,8 @@ let player4 = {
         
     }
 }
+player4.greet() //matlab maine call kiya ab o/p hello ronaldo ayega
+//pehle call karna zaruri hai
 console.log(player4.greet()); //undefined
 /* Samajh yaha greet ek key hai jo function value store karri
 jab bhi koi key ke andar function ho to wo automatically method 
@@ -328,7 +330,7 @@ console.log(footballera[mySym1]);
 //Object.create() se ham ek naya object create kar sakte hai
 
 let playerb = Object.create(null)
-//creates and empty object then we can add properties
+//creates an empty object then we can add properties
 playerb.name = "Ronaldo"
 playerb.status = "GOAT"
 
