@@ -210,3 +210,116 @@ fullPhone2.popularity = {
     ...phone.popularity
 }
 console.log(fullPhone2);
+
+
+
+/***************************DESTRUCTURING************************* */
+const user1 = {
+    name: "Umar",
+    age: 21,
+    city: "Pune"
+}
+
+const{name, age, city} = user1
+console.log(name);
+console.log(age);
+console.log(city);
+//destructuring matlab hamne object ki properties ko bahar nikalke 
+//unko hi variable bana diya ; ab baar baar user. name , age aisa likhne
+//ka kaam nhi. Direct likho console.log(age)
+
+//custom destructuring
+//naam aur agar alag chize samajh nahi aari to ham change kar skte
+
+const user2 = {
+    name: "Umar",
+    age: 22
+}
+const{name: username , age: userage} = user2
+console.log(username);
+console.log(userage);
+//matlab name ki value ko username naam ke variable me store karo
+
+
+let player7 = {
+    name: "Ronaldo",
+    age: 42
+}
+let{name: playerName, age: playerAge} = player7
+console.log(playerName);
+console.log(playerAge);
+
+
+/*********************NESTED OBJECT DESTRUCTURING******************** */
+let player8 = {
+    name: "Ronaldo",
+    details: {
+        country: "Portugal",
+        club: "Al Nassr"
+    }
+}
+let{details: { country, club}} = player8
+console.log(club);
+console.log(country);
+
+let player9 = {
+    name: "Umar",
+    formalities: {
+        college: "G.H RAISONI",
+        branch: "IT"
+    }
+
+}
+let {formalities: {college, branch}} = player9
+console.log(college);
+console.log(branch);
+
+
+/*********************JSON (Java Script Object Notation)***************** */
+//JSON ==> ek format hai to store and transfer data
+
+//ek alag file banaya maine json ke liye
+//we can't write json in normal js file
+//there are no comments in json
+
+//API ek medium hai jiske through application aur server
+//data exchange karte hai
+
+
+//Array of Objects me array ke andar multiple JSON objects hote hai
+//ek JSON file me ek hi value allow hoti hai
+//JSON formatter = JSON ko clean aur readable format me dikhane ka tool
+
+/* is JSON 
+{
+    "name": "Umar",
+    "age" : 21
+}
+
+JSON array of objects ( multiple json objects in an array)
+
+[
+{
+   "name" : "Umar",
+   "age": 22
+ },
+ {
+   "name": "Rahul",
+   "age": 21
+ },
+ {
+    "name": "Rohit",
+    "age": 24
+ }
+]
+
+//JSON formatter==> formats the JSON file
+{"name":"Ronaldo","age":42,"country":"Portugal","club":"Al Nassr"}
+
+                        {
+    "name": "Ronaldo",
+    "age": 42,
+    "country": "Portugal",
+    "club": "Al Nassr"
+}
+    */
